@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePortal | Logowanie</title>
+    <script src="https://kit.fontawesome.com/b082f6b647.js" crossorigin="anonymous"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
+    <link href="login.css"> {% endcomment %}
+    {% load bootstrap %}
+</head>
+<body>
+<section class="vh-100" style="background-color: #212533;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img img src="https://i.ibb.co/2KvTfvM/eportal-3.png"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+  
+                  <form method="post">
+                    
+                    
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <i class="fas fa-cubes fa-2x me-3" style="color: #212533;"></i>
+                      <span class="h1 fw-bold mb-0">ePortal</span>
+                    </div>
+  
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Zaloguj się</h5>
+                    {% csrf_token %}
+                    {{ form|bootstrap }}
+                    <br>
+                    <button type="submit"class="btn btn-dark">Zaloguj</button>
+                    <a class="small text-muted" href="/index/">Nie pamietasz hasła?</a>
+                    <br>
+                    {% comment %} <p class="mb-5 pb-lg-2" style="color: #393f81;">Nie masz konta?<br> <a href="http://127.0.0.1:8000/index/"
+                        style="color: #393f81;">Przeczytaj informacje</a></p> {% endcomment %}
+                    {% comment %} <a href="#" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content">Nie masz konta?</a> {% endcomment %}
+                    <br>
+                    <a href="#!" class="small text-muted">Warunki korzystania.</a>
+                    <a href="#!" class="small text-muted">Polityka prywatności</a>
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

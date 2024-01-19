@@ -1,0 +1,6 @@
+*.idea
+*.sqlite
+*pyc
+.env
+*.env
+

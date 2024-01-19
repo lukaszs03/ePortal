@@ -1,0 +1,1 @@
+web: gunicorn PortalPracownika.wsgi --log-file -
